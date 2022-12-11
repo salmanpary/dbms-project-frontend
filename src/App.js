@@ -1,4 +1,5 @@
 import React,{useState} from "react";
+import Admin  from './components/Admin';
 import './App.css';
 import { Login } from './components/Login';
 import { Register } from './components/Register';
