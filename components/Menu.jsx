@@ -1,10 +1,10 @@
-import "../styles/menu.css"
+
 import Row from "./Row";
 import requests from "./requests";
 
 
 
-function App() {
+function Menu() {
   return (
     <div className="app">
       
@@ -23,5 +23,4 @@ function App() {
     </div>
   );
 }
-
-export default App;
+export default Menu

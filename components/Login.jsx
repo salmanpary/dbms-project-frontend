@@ -1,5 +1,4 @@
 import React,{useState} from "react";
-import "../styles/login.css"
  const Login = (props) => {
     const [num,setNum] = useState('');
     const [pass,setPass] = useState('');
@@ -10,7 +9,7 @@ import "../styles/login.css"
     }
 
     return(
-        <div className="auth-form-container">
+        <div className="App auth-form-container">
             <form className="login-form" onSubmit={handleSubmit}>
             <label htmlFor="text">Username</label>
             <input value={num} onChange = {(e)=> setNum(e.target.value)} type="text" placeholder="Enter number"/>
