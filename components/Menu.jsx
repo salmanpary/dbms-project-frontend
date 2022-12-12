@@ -1,13 +1,9 @@
-
 import Row from "./Row";
 import requests from "./requests";
-
-
 
 function Menu() {
   return (
     <div className="app">
-      
       <Row
         title="NETFLIX ORIGINALS"
         fetchUrl={requests.fetchNetflixOriginals}
@@ -23,4 +19,4 @@ function Menu() {
     </div>
   );
 }
-export default Menu
+export default Menu;

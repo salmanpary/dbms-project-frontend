@@ -1,9 +1,12 @@
-import React from 'react'
-import Menu from '../components/Menu'
+import React from "react";
+import TempMenu from "../components/TempMenu";
 const menu = () => {
   return (
-    <Menu/>
-  )
-}
+    // <Menu/>
+    <>
+    <TempMenu/>
+    </>
+  );
+};
 
-export default menu
+export default menu;

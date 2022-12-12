@@ -1,20 +1,14 @@
 import React from "react";
 import axios from "axios";
-const Admin = () => {
+const Admin2 = () => {
   const [nopayment, setnopayment] = React.useState(null);
-  const [payment, setpayment] = React.useState(null);
   const FetchNoPayment = async () => {
     const res = await axios.get("http://localhost:5000/admin/nopayment");
     setnopayment(res.data);
     console.log(res);
   };
-  const FetchPaymentDone = async () => {
-    const res = await axios.get("http://localhost:5000/admin/paymentdone");
-    setpayment(res.data);
-    console.log(res);
-  };
   React.useEffect(() => {
-    FetchPaymentDone();
+    FetchNoPayment();
   }, []);
   return (
     <div className="flex flex-col h-screen w-screen mt-4 items-center font-sans overflow-hidden">
@@ -27,7 +21,7 @@ const Admin = () => {
           <div className="w-64">phone number</div>
         </div>
         <div>
-          {payment?.map((order) => {
+          {nopayment?.map((order) => {
             return (
               <div className="flex gap-2 my-2 bg-white rounded-sm py-2 font-semibold">
                 <div className="w-64">{order.id}</div>
@@ -43,4 +37,4 @@ const Admin = () => {
   );
 };
 
-export default Admin;
+export default Admin2;
