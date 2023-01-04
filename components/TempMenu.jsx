@@ -15,9 +15,9 @@ const TempMenu = () => {
     console.log(menu);
   }, []);
   return (
-    <div className="border border-t-1">
+    <div className="grid grid-cols-1 md:grid-cols-3 grid-flow-row gap-4  border border-t-1 px-5 py-3">
       {!menu && (
-      <div className="max-w-full h-40 flex flex-col m-20 ">
+      <div className="max-w-full h-40 items-center justify-center mx-auto flex flex-col  ">
         <h1 className="text-2xl mx-auto">loading...</h1>
       </div>)}
       {menu &&
@@ -34,7 +34,10 @@ const TempMenu = () => {
 
            </MenuCard>
           );
+
         })}
+        
+        
         <div className="flex w-full justify-center items-center py-2">
 
         {menu&&(

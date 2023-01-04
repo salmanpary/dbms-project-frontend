@@ -2,7 +2,10 @@ import React from 'react'
 import Login from "../components/Login"
 const Login1 = () => {
   return (
-    <Login/>
+    <div>
+      <Header propAuth={true}/>
+      <Login/>
+    </div>
   )
 }
 

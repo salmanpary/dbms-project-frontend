@@ -1,6 +1,8 @@
 import Link from "next/link"
+import { useState } from "react";
 
-const Header = () => {
+const Header = ({propAuth}) => {
+    const [signIn,SetsignIn] = useState(propAuth);
     return (
       <header className='flex justify-between p-5 max-w-7xl mx-auto'>
           <div className='flex items-center space-x-5'>
@@ -13,7 +15,7 @@ const Header = () => {
                   <h3 className='text-white bg-green-600 px-4 py-1 rounded-full'>Follow</h3>
               </div>
           </div>
-          <div className='flex items-center space-x-5 text-green-600'>
+          {signIn&&(<div className='flex items-center space-x-5 text-green-600'>
               <Link href="/login">
                 <h3>Sign in</h3>
               </Link>
@@ -22,7 +24,7 @@ const Header = () => {
                   Get Started
               </h3>
               </Link>
-          </div>
+          </div>)}
       </header>
     )
   }

@@ -6,7 +6,7 @@ import Login from '../components/Login'
 export default function Home() {
   return (
     <div>
-      <Header/>
+      <Header propAuth={true}/>
       <Login/>
     </div>
   )

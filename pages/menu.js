@@ -5,7 +5,7 @@ const menu = () => {
   return (
     // <Menu/>
     <>
-    <Header/>
+    <Header propAuth={false}/>
     <TempMenu/>
     </>
   );

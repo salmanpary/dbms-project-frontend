@@ -4,7 +4,7 @@ import Register from '../components/Register'
 const signup = () => {
   return (
     <div>
-      <Header/>
+      <Header propAuth={true}/>
       <Register/>
     </div>
   )
