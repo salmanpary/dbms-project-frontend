@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import axios from "axios";
-import Router, { useRouter } from "next/router";
-import Image from "next/image";
+import { useRouter } from "next/router";
 import MenuCard from "./MenuCard";
 const TempMenu = () => {
   const router = useRouter();
@@ -16,8 +15,11 @@ const TempMenu = () => {
     console.log(menu);
   }, []);
   return (
-    <div>
-      {!menu && "loading...."}
+    <div className="border border-t-1">
+      {!menu && (
+      <div className="max-w-full h-40 flex flex-col m-20 ">
+        <h1 className="text-2xl mx-auto">loading...</h1>
+      </div>)}
       {menu &&
         menu.map((item, index) => {
           return (
@@ -35,9 +37,11 @@ const TempMenu = () => {
         })}
         <div className="flex w-full justify-center items-center py-2">
 
-        <button className="px-2 py-1 w-20 flex justify-center items-center bg-green-700 rounded-xl">
-            order
-        </button>
+        {menu&&(
+          <button className="px-2 py-1 w-20 flex justify-center items-center bg-green-700 rounded-xl">
+          order
+          </button>
+        )}
         </div>
     </div>
   );

@@ -34,6 +34,10 @@ const MenuCard = ({ index, image, itemname, description, price }) => {
         </div>
           <div className="text-xl text-red-900">quantity:{quantity}</div>
       </div>
+      <form>
+        <input type="checkbox"/>
+        <label>Order Item</label>
+      </form>
     </div>
   );
 };
